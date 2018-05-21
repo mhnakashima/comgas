@@ -1,24 +1,24 @@
-$primaryColor: #0075c1;
+ $footerColor: #404042;
 
-$cardDefaultBackgroundColor: #0075c1;
-$cardTextDefaultColor: #fff;
-
-
-$pallete1: #8F5C23;
-$pallete2: #076cad;
-
-$tiny: "only screen and (max-width : 480px)";
-$small: "only screen and (min-width : 481px) and (max-width: 768px)";
-$medium: "only screen and (min-width : 767px) and (max-width: 991px)";
-$large: "only screen and (min-width : 991px) and (max-width: 1191px)";
-$extralarge: "only screen and (min-width : 1191px)";
-
-$desktop: "only screen and (min-width : 767px)";
+/* =Caixa */
+$borderCaixaBackground: #fdfbfe;
 
 
-/* 
-	Menu Variables 
-*/
-$mainColorMenuItem: #337ab7;
+ /* buttonColor */
+ $buttonTextColor: #404042;
+ $buttonIconColor: #b8e2be; 
 
+ /* =Misc */
+ $containerHeight: 600px;
+ $containerWidth: 1024px;
 
+ $popupBgTopo: #7dafa9;
+
+ $colorWhite: #fff;
+
+ $colorLink: #00476c;
+
+ $backgroundGreen: #80c342;
+ $backgroundBlue: #007db7;
+ $backgroundSoftBlue: #00a8dd;
+ $backgroundGray: #ecebe7

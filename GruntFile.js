@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        'app/css/**/*.css',
+                        'app/css/*.css',
                         'app/**/*.html',
 						'app/js/**/*.js'
                     ]
@@ -61,23 +61,24 @@ module.exports = function (grunt) {
 		},
 		
 		bowercopy: {
-		  options: {
-			srcPrefix: 'app/bower_components'
-		  },
-		  scripts: {
+			
 			options: {
-			  destPrefix: 'app/vendor'
+				srcPrefix: 'bower_components'
 			},
-			files: {
-			  'js/vendor/jquery/jquery.min.js': 'jquery/dist/jquery.min.js',
-			  'js/vendor/angular/angular.min.js': 'angular/angular.min.js',
-			  'js/vendor/angular-route/angular-route.min.js': 'angular-route/angular-route.min.js',
-			  'js/vendor/angular-animate/angular-animate.js': 'angular-animate/angular-animate.js',
-			  'js/vendor/ngmap/ng-map.min.js': 'ngmap/build/scripts/ng-map.min.js',
-			  'css/vendor/boostrap/css/boostrap.min.css' : 'bootstrap/dist/css/bootstrap.min.css',
-			  'css/vendor/components-font-awesome/css/font-awesome.min.css' : 'components-font-awesome/css/font-awesome.min.css'
+    		scripts: {
+				options: {
+				  destPrefix: 'vendor'
+				},
+				files: {
+				  'js/libs/angular/angular.min.js': 'angular/angular.min.js',
+				  'js/libs/angular-animate.min/angular-animate.min.js': 'angular-animate.min/angular-animate.min.js',
+				  'css/bootstrap/dist/css/bootstrap.min.css': 'bootstrap/dist/css/bootstrap.min.css',
+				  'css/components-font-awesome/css/font-awesome.min.css': 'components-font-awesome/css/font-awesome.min.css',
+				  'css/components-font-awesome/fonts/**': 'components-font-awesome/fonts/**',
+				  'js/libs/ngmap/build/scripts/ng-map.minjs': 'ngmap/build/scripts/ng-map.min.js'			  
+				}
 			}
-		  }
+		
 		}
     });	
 	
@@ -93,7 +94,7 @@ module.exports = function (grunt) {
     // define default task
     grunt.registerTask('default', ['browserSync', 'watch']);
 	grunt.registerTask('minify', ['cssmin', 'uglify']);
-	grunt.registerTask('bower', ['bowercopy']);
+	grunt.registerTask('bowercopy', ['bowercopy']);
 };
 
 
