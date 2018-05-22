@@ -34,20 +34,53 @@ a {
   color: #00476c;
   font-size: 16px; }
 
+.brand {
+  height: 60px;
+  width: 248px;
+  float: left;
+  background-color: #f00; }
+
 .button--small {
   border: 1px solid #00476c;
   border-radius: 25px; }
 
+.nav li {
+  margin-right: 25px; }
+
+.main__nav {
+  margin: 0px auto 0;
+  padding-top: 55px;
+  width: 990px; }
 .main__container {
   background: url(../images/background.png) no-repeat;
   background-size: cover;
-  min-height: 565px; }
+  min-height: 768px;
+  position: relative; }
+
+.folder__container {
+  position: absolute;
+  width: 950px;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -475px; }
+.folder__image {
+  display: inline-block;
+  background-color: #f00;
+  height: 500px;
+  width: 500px; }
+.folder__text {
+  display: inline-block;
+  padding-left: 60px;
+  color: #00476c;
+  font-family: "Valera Round", sans-serif; }
+  .folder__text > h2 {
+    font-weight: 100; }
 
 .background, .background--isGreen, .background--isBlue, .background--isSoftBlue, .background--isGray {
   padding: 96px 0;
   color: #fff;
   font-family: "Myriad Pro", 'PT Sans', sans-serif;
-  font-size: 18px; }
+  font-size: 24px; }
   .background--isGreen {
     background-color: #80c342;
     font-weight: 100; }
@@ -58,13 +91,50 @@ a {
   .background--isGray {
     background-color: #ecebe7;
     color: #00476c; }
+  .background--noPadding {
+    padding: 0px; }
 
-.section__title {
+.section__title, .section__title--description {
+  margin-bottom: 40px;
   font-family: 'Born Losers Sans';
-  font-size: 32px; }
+  font-size: 72px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .section__title--description {
+    color: #00a8dd;
+    font-size: 56px; }
 
-.highFont {
+.comgas__faz {
   font-family: 'Born Losers Sans';
-  font-size: 82px; }
+  font-size: 220px; }
+  .comgas__faz--isBlue {
+    color: #00476c; }
+  .comgas__faz--isGreen {
+    color: #80c342;
+    font-size: 110px; }
+.comgas__transforme {
+  font-weight: bolder;
+  border-bottom: 1px solid; }
+.comgas__texto {
+  font-size: 2em; }
+.comgas__card > div {
+  font-size: 16px; }
+.comgas__card .info {
+  color: #80c342;
+  font-family: 'Born Losers Sans';
+  font-size: 36px;
+  font-weight: bolder; }
+
+.highFont, .highFont--info {
+  font-family: 'Born Losers Sans';
+  font-size: 82px;
+  text-transform: uppercase; }
+  .highFont--info {
+    font-size: 36px;
+    font-weight: 200; }
+
+.emphasis {
+  font-size: 28px;
+  font-weight: 800; }
 
 /*# sourceMappingURL=styles.css.map */

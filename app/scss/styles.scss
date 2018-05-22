@@ -74,6 +74,16 @@ a{
     font-size: 16px;
 }
 
+.brand{
+
+    height: 60px;
+    width: 248px;
+
+    float: left;
+
+    background-color: #f00;
+}
+
 .button{
 
     &--small{
@@ -82,18 +92,69 @@ a{
     }
 }
 
-.main__container{
-    background: url(../images/background.png) no-repeat;
-    background-size: cover;
-    min-height: 565px;
+.nav{
+    li{
+        margin-right: 25px;
+    }
 }
+
+.main{
+
+    &__nav{
+        margin: 0px auto 0;
+        padding-top: 55px;
+        width: 990px;
+    }
+
+    &__container{
+        background: url(../images/background.png) no-repeat;
+        background-size: cover;
+        min-height: 768px;
+
+        position: relative;
+    }
+}
+
+.folder{
+
+    &__container{
+        position: absolute;
+        width: 950px;
+
+        bottom: 0px;
+        left: 50%;
+        margin-left: -475px;
+    }
+
+    &__image{
+        display: inline-block;
+        background-color: #f00;
+
+        height: 500px;
+        width: 500px;
+    }
+
+    &__text{
+
+        display: inline-block;
+        padding-left: 60px;
+
+        color: $colorLink;
+        font-family: "Valera Round", sans-serif;
+
+        >h2{
+            font-weight: 100;
+        }
+    }
+}
+
 .background{
 
     padding: 96px 0;
 
     color: $colorWhite;
     font-family: "Myriad Pro", 'PT Sans', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
 
     &--isGreen{
         @extend .background;
@@ -117,16 +178,82 @@ a{
 
         color: $colorLink;
     }
+
+    &--noPadding{
+        padding: 0px;
+    }
 }
 
 .section{
     &__title{
+        margin-bottom: 40px;
+
         font-family: 'Born Losers Sans';
-        font-size: 32px;
+        font-size: 72px;
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+
+        &--description{
+            @extend .section__title;
+
+            color: $backgroundSoftBlue;
+            font-size: 56px;
+        }
+    }
+}
+
+.comgas{
+    &__faz{
+        font-family: 'Born Losers Sans';
+        font-size: 220px;
+
+        &--isBlue{
+            color: $colorLink;
+        }
+
+        &--isGreen{
+            color: $backgroundGreen;
+            font-size: 110px;
+        }
+    }
+
+    &__transforme{
+        font-weight: bolder;
+        border-bottom: 1px solid; 
+    }
+
+    &__texto{
+        font-size: 2em;
+    }
+
+    &__card{
+        >div{
+            font-size: 16px;
+        }
+        .info{
+            color: $backgroundGreen;
+            font-family: 'Born Losers Sans';
+            font-size: 36px;
+            font-weight: bolder;
+        }
     }
 }
 
 .highFont{
     font-family: 'Born Losers Sans';
     font-size: 82px;
+    text-transform: uppercase;
+
+    &--info{
+        @extend .highFont;
+
+        font-size: 36px;
+        font-weight: 200;
+    }
 }
+.emphasis{
+    font-size: 28px;
+    font-weight: 800;
+}
+
