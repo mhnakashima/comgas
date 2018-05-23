@@ -76,42 +76,95 @@ a{
 
 .brand{
 
-    height: 60px;
-    width: 248px;
+    height: 57px;
+    width: 239px;
 
     float: left;
 
-    background-color: #f00;
+    background: url(../images/brand.png) no-repeat;
 }
 
 .button{
 
+    &--menu{
+        padding: 5px 15px;
+        font-size: 16px;
+
+        border: 3px solid $colorLink;
+        border-radius: 20px;
+    }
+
     &--small{
-        border: 1px solid $colorLink;
-        border-radius: 25px;
+
+        padding: 10px 25px;
+
+        border: 3px solid $colorLink;
+        border-radius: 40px;
+
+        font-size: 32px;
+    }
+
+    &--top{
+        position: fixed;
+        bottom: 35px;
+        right: 35px;
+        z-index: 15000;
+        
+        color: $backgroundSoftBlue;
+        font-size: 72px;
+
+      
     }
 }
 
 .nav{
     li{
-        margin-right: 25px;
+        margin-right: 20px;
+
+        &.listDivider{
+            margin-right: 79px;
+
+            &--isRight{
+                margin-left: 100px;
+
+                @media screen and (max-width: 572px) {
+
+                    margin-left: 0px;
+                }
+            }
+        }
     }
+
+    @media screen and (max-width: 572px) {
+        li{
+            margin-right: 10px;
+
+            float: left;
+            display: inline-block;
+        }
+    }
+    
 }
 
 .main{
 
     &__nav{
-        margin: 0px auto 0;
-        padding-top: 55px;
+       
         width: 990px;
+        position: absolute;
+        left: 50%;
+        top: 50px; 
+        margin-left: -495px;
     }
 
     &__container{
-        background: url(../images/background.png) no-repeat;
+       /* background: url(../images/background.png) no-repeat;
         background-size: cover;
-        min-height: 768px;
+        position: relative;*/
 
-        position: relative;
+        .img-fluid{
+            width: 100%;
+        }
     }
 }
 
@@ -139,6 +192,10 @@ a{
         display: inline-block;
         padding-left: 60px;
 
+        position: absolute;
+        bottom: 20px;
+    
+
         color: $colorLink;
         font-family: "Valera Round", sans-serif;
 
@@ -151,6 +208,7 @@ a{
 .background{
 
     padding: 96px 0;
+    position: relative;
 
     color: $colorWhite;
     font-family: "Myriad Pro", 'PT Sans', sans-serif;
@@ -182,6 +240,16 @@ a{
     &--noPadding{
         padding: 0px;
     }
+
+    
+}
+
+@media (max-width: 572px){
+    .background{
+        padding: 20px 0;
+
+        font-size: 16px;
+    }
 }
 
 .section{
@@ -201,12 +269,51 @@ a{
             font-size: 56px;
         }
     }
+
+    @media (max-width: 572px){
+        &__title{
+            margin-bottom: 15px;
+            font-size: 42px;
+            text-align: center;
+
+            &--image{
+                margin: 10px 0px;
+
+                text-align: center;
+            }
+        }
+    }
+}
+
+.pin{
+    position: absolute;
+    right: 0px;
+
+    top: 50%;
+
+    &--right, &--left{
+        margin-top: -54px;
+    }
+
+    &--right{
+        @extend .pin;
+    }
+
+    &--left{
+        @extend .pin;
+
+        left: 0px;
+    }
 }
 
 .comgas{
     &__faz{
         font-family: 'Born Losers Sans';
         font-size: 220px;
+
+        >image{
+            max-width: 350px;
+        }
 
         &--isBlue{
             color: $colorLink;
@@ -215,6 +322,7 @@ a{
         &--isGreen{
             color: $backgroundGreen;
             font-size: 110px;
+
         }
     }
 
@@ -240,6 +348,182 @@ a{
     }
 }
 
+.etapa{
+    li{
+        display: inline-block;
+        float: left;
+        position: relative;
+
+        margin-right: 135px;
+
+        &:last-child{
+            margin-right: 0px
+        }
+
+        >img{
+            width: 87px;
+
+           
+        }
+        
+        &:not(:last-child){
+            &:after{
+                content: ' ';
+                height: 3px;
+                width: 80px;
+    
+                background-color: $backgroundGreen;
+    
+                position: absolute;
+    
+                top: 30%;
+                right: -100px;
+            }
+        }     
+    }
+
+    &__title{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 572px) {
+    .etapa{
+
+        padding: 0px;
+
+        li{
+            clear: both;
+            display: block;
+            list-style: none;
+            float: initial;
+            text-align: center;
+
+            margin: 0px;
+           
+
+            &:not(:last-child){
+                &:after{
+                    content: ' ';
+                    height: 35px;
+                    width: 3px;
+        
+                    background-color: $backgroundGreen;
+        
+                    position: absolute;
+                    
+                    left: 50%;
+                    bottom: -50px;
+                    top: initial;
+
+                    margin-left: -1px;
+                }
+            }  
+            
+            &:not(:first-child){
+                margin-top: 55px;
+            }
+        }
+
+        &__title{
+            margin-top: 15px;
+        }
+    }
+}
+
+.beneficios{
+   
+}
+
+@media screen and (max-width: 572px) {
+    .beneficios{
+        
+        margin-top: 15px;
+
+        &--image{
+            text-align: center;
+            img{
+                width: 90px;
+            }
+        }
+
+        &--text{
+            text-align: center;
+        }
+    }
+}
+
+.dateCounter{
+    margin: 0 auto;
+
+    text-align: center;
+
+    &__holder{
+        display: inline-block;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+
+        text-align: center;
+
+        @media screen and (max-width: 572px) {
+            display: block;
+        }
+    }
+
+    &__item{
+
+        margin-right: 40px;
+
+        text-align: left;
+        color: $colorLink;
+        font-size: 30px;
+        line-height: 32px;
+
+        &--right{
+            margin-left: 40px;
+        }
+    }
+}
+
+#navbarSupportedContent{
+    
+    position: absolute;
+    top: 40px;
+    left: 5px;
+    width: 100vw;
+    z-index: 200;
+
+    .nav{
+        li{
+            display: block;
+            width: 100%;
+
+            background-color: #fff;
+
+            a{
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+.link{
+    &--isSocial{
+        font-weight: bold;
+        font-size: 22px;
+
+        @media screen and (max-width: 572px) {
+            font-size: 16px;
+        }
+    }
+}
+
 .highFont{
     font-family: 'Born Losers Sans';
     font-size: 82px;
@@ -251,9 +535,87 @@ a{
         font-size: 36px;
         font-weight: 200;
     }
+
+    &--isGreen{
+        @extend .highFont;
+
+        color: $backgroundGreen;
+        font-size: 172px;
+
+        text-decoration: underline;
+
+        @media screen and (max-width: 572px) {
+            display: block;
+            font-size: 82px;
+        } 
+    }
+
+    &--isDate{
+        @extend .highFont;
+
+        font-size: 52px;
+
+        @media screen and (max-width: 572px) {
+            display: block;
+
+            font-size: 42px;
+        }   
+    }
 }
+
+
+
+
 .emphasis{
     font-size: 28px;
     font-weight: 800;
 }
 
+.fontBold{
+    font-weight: bold;
+}
+
+.marginTop50px{
+    margin-top: 50px;
+}
+
+.marginTop80px{
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 572px) {
+    .marginTop80px{
+        margin-top: 20px;
+    }       
+}
+
+.marginLeft45px{
+    margin-left: 45px;
+
+    @media screen and (max-width: 572px) {
+        margin-left: 0px;
+    }
+}
+
+.marginRight45px{
+    margin-right: 45px;
+
+    @media screen and (max-width: 572px) {
+        margin-right: 0px;
+    }
+}
+
+.marginTop10Neg{
+    margin-top: -10px;
+}
+
+.displayInlineBlock{
+    display: inline-block;
+}
+
+.navbar-toggler{
+    position: absolute;
+
+    left: 5px;
+    top: 5px;
+}

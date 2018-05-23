@@ -35,27 +35,56 @@ a {
   font-size: 16px; }
 
 .brand {
-  height: 60px;
-  width: 248px;
+  height: 57px;
+  width: 239px;
   float: left;
-  background-color: #f00; }
+  background: url(../images/brand.png) no-repeat; }
 
+.button--menu {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 3px solid #00476c;
+  border-radius: 20px; }
 .button--small {
-  border: 1px solid #00476c;
-  border-radius: 25px; }
+  padding: 10px 25px;
+  border: 3px solid #00476c;
+  border-radius: 40px;
+  font-size: 32px; }
+.button--top {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 15000;
+  color: #00a8dd;
+  font-size: 72px; }
 
 .nav li {
-  margin-right: 25px; }
+  margin-right: 20px; }
+  .nav li.listDivider {
+    margin-right: 79px; }
+    .nav li.listDivider--isRight {
+      margin-left: 100px; }
+      @media screen and (max-width: 572px) {
+        .nav li.listDivider--isRight {
+          margin-left: 0px; } }
+@media screen and (max-width: 572px) {
+  .nav li {
+    margin-right: 10px;
+    float: left;
+    display: inline-block; } }
 
 .main__nav {
-  margin: 0px auto 0;
-  padding-top: 55px;
-  width: 990px; }
+  width: 990px;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  margin-left: -495px; }
 .main__container {
-  background: url(../images/background.png) no-repeat;
-  background-size: cover;
-  min-height: 768px;
-  position: relative; }
+  /* background: url(../images/background.png) no-repeat;
+   background-size: cover;
+   position: relative;*/ }
+  .main__container .img-fluid {
+    width: 100%; }
 
 .folder__container {
   position: absolute;
@@ -71,6 +100,8 @@ a {
 .folder__text {
   display: inline-block;
   padding-left: 60px;
+  position: absolute;
+  bottom: 20px;
   color: #00476c;
   font-family: "Valera Round", sans-serif; }
   .folder__text > h2 {
@@ -78,6 +109,7 @@ a {
 
 .background, .background--isGreen, .background--isBlue, .background--isSoftBlue, .background--isGray {
   padding: 96px 0;
+  position: relative;
   color: #fff;
   font-family: "Myriad Pro", 'PT Sans', sans-serif;
   font-size: 24px; }
@@ -94,6 +126,10 @@ a {
   .background--noPadding {
     padding: 0px; }
 
+@media (max-width: 572px) {
+  .background, .background--isGreen, .background--isBlue, .background--isSoftBlue, .background--isGray {
+    padding: 20px 0;
+    font-size: 16px; } }
 .section__title, .section__title--description {
   margin-bottom: 40px;
   font-family: 'Born Losers Sans';
@@ -103,10 +139,29 @@ a {
   .section__title--description {
     color: #00a8dd;
     font-size: 56px; }
+@media (max-width: 572px) {
+  .section__title, .section__title--description {
+    margin-bottom: 15px;
+    font-size: 42px;
+    text-align: center; }
+    .section__title--image {
+      margin: 10px 0px;
+      text-align: center; } }
+
+.pin, .pin--right, .pin--left {
+  position: absolute;
+  right: 0px;
+  top: 50%; }
+  .pin--right, .pin--left {
+    margin-top: -54px; }
+  .pin--left {
+    left: 0px; }
 
 .comgas__faz {
   font-family: 'Born Losers Sans';
   font-size: 220px; }
+  .comgas__faz > image {
+    max-width: 350px; }
   .comgas__faz--isBlue {
     color: #00476c; }
   .comgas__faz--isGreen {
@@ -125,16 +180,160 @@ a {
   font-size: 36px;
   font-weight: bolder; }
 
-.highFont, .highFont--info {
+.etapa li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-right: 135px; }
+  .etapa li:last-child {
+    margin-right: 0px; }
+  .etapa li > img {
+    width: 87px; }
+  .etapa li:not(:last-child):after {
+    content: ' ';
+    height: 3px;
+    width: 80px;
+    background-color: #80c342;
+    position: absolute;
+    top: 30%;
+    right: -100px; }
+.etapa__title {
+  margin-top: 50px;
+  text-align: center; }
+
+@media screen and (max-width: 572px) {
+  .etapa {
+    padding: 0px; }
+    .etapa li {
+      clear: both;
+      display: block;
+      list-style: none;
+      float: initial;
+      text-align: center;
+      margin: 0px; }
+      .etapa li:not(:last-child):after {
+        content: ' ';
+        height: 35px;
+        width: 3px;
+        background-color: #80c342;
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        top: initial;
+        margin-left: -1px; }
+      .etapa li:not(:first-child) {
+        margin-top: 55px; }
+    .etapa__title {
+      margin-top: 15px; } }
+@media screen and (max-width: 572px) {
+  .beneficios {
+    margin-top: 15px; }
+    .beneficios--image {
+      text-align: center; }
+      .beneficios--image img {
+        width: 90px; }
+    .beneficios--text {
+      text-align: center; } }
+.dateCounter {
+  margin: 0 auto;
+  text-align: center; }
+  .dateCounter__holder {
+    display: inline-block; }
+  .dateCounter__container {
+    display: flex;
+    align-items: center;
+    text-align: center; }
+    @media screen and (max-width: 572px) {
+      .dateCounter__container {
+        display: block; } }
+  .dateCounter__item {
+    margin-right: 40px;
+    text-align: left;
+    color: #00476c;
+    font-size: 30px;
+    line-height: 32px; }
+    .dateCounter__item--right {
+      margin-left: 40px; }
+
+#navbarSupportedContent {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  width: 100vw;
+  z-index: 200; }
+  #navbarSupportedContent .nav li {
+    display: block;
+    width: 100%;
+    background-color: #fff; }
+    #navbarSupportedContent .nav li a {
+      margin: 5px 0; }
+
+.link--isSocial {
+  font-weight: bold;
+  font-size: 22px; }
+  @media screen and (max-width: 572px) {
+    .link--isSocial {
+      font-size: 16px; } }
+
+.highFont, .highFont--info, .highFont--isGreen, .highFont--isDate {
   font-family: 'Born Losers Sans';
   font-size: 82px;
   text-transform: uppercase; }
   .highFont--info {
     font-size: 36px;
     font-weight: 200; }
+  .highFont--isGreen {
+    color: #80c342;
+    font-size: 172px;
+    text-decoration: underline; }
+    @media screen and (max-width: 572px) {
+      .highFont--isGreen {
+        display: block;
+        font-size: 82px; } }
+  .highFont--isDate {
+    font-size: 52px; }
+    @media screen and (max-width: 572px) {
+      .highFont--isDate {
+        display: block;
+        font-size: 42px; } }
 
 .emphasis {
   font-size: 28px;
   font-weight: 800; }
+
+.fontBold {
+  font-weight: bold; }
+
+.marginTop50px {
+  margin-top: 50px; }
+
+.marginTop80px {
+  margin-top: 80px; }
+
+@media screen and (max-width: 572px) {
+  .marginTop80px {
+    margin-top: 20px; } }
+.marginLeft45px {
+  margin-left: 45px; }
+  @media screen and (max-width: 572px) {
+    .marginLeft45px {
+      margin-left: 0px; } }
+
+.marginRight45px {
+  margin-right: 45px; }
+  @media screen and (max-width: 572px) {
+    .marginRight45px {
+      margin-right: 0px; } }
+
+.marginTop10Neg {
+  margin-top: -10px; }
+
+.displayInlineBlock {
+  display: inline-block; }
+
+.navbar-toggler {
+  position: absolute;
+  left: 5px;
+  top: 5px; }
 
 /*# sourceMappingURL=styles.css.map */

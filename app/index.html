@@ -14,49 +14,43 @@
 	
 	<body>
 
-		<div class="main__container">
+		<a class="button--top " href="#top">
+			<i class="fas fa-arrow-alt-circle-up"></i>
+		</a>
 
-			<nav class="container main__nav">
+		<button class="navbar-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+		</button>
+
+		<div class=" main__container hide">
+
+			<nav class="container main__nav d-none d-sm-block">
 				
 				<ul class="nav">
-					<li><a href="#" class="brand"></a></li>
-					<li class="nav-item"><a href="#" class="link nav-link">A Comgás</a></li>
-					<li class="nav-item"><a href="#" class="link nav-link">O Programa</a></li>
-					<li class="nav-item"><a href="#" class="link nav-link">Etapas</a></li>
-					<li class="nav-item"><a href="#" class="link nav-link">Benefícios</a></li>
-					<li class="nav-item"><a href="#" class="link nav-link button--small">Inscreva-se</a></li>
+					<li><a id="top" href="#" class="brand"></a></li>
+					<li class="nav-item"><a href="#intro" class="link nav-link">A Comgás</a></li>
+					<li class="nav-item"><a href="#programa" class="link nav-link">O Programa</a></li>
+					<li class="nav-item"><a href="#etapas" class="link nav-link">Etapas</a></li>
+					<li class="nav-item"><a href="#beneficios" class="link nav-link">Benefícios</a></li>
+					<li class="nav-item"><a href="#" class="link nav-link button--menu">Inscreva-se</a></li>
 				</ul>
 			</nav>
 
-			
-			<div class="comgas__text">
-
-				<div class="folder__container">
-
-					<img src="" alt="" class="folder__image" />
-
-					<div class="folder__text">
-						<h2>Programa de <br><span class="emphasis">Trainee Comgás 2018</span></h2>
-
-						<div class="comgas__faz">
-							<!--<span class="comgas__faz--isBlue">VAI</span> <span class="comgas__faz--isGreen">lá e</span>
-							<br><span class="comgas__faz--isBlue">FAZ!</span>-->
-						</div>
-		
-						<h3 class="comgas__transforme">Transforme sua história</h3>
-		
-						<p class="comgas__texto">Fazendo parte da revolução <br> energética brasileira</p>
-						
-					</div>
-					
-					
-				</div>
+			<div id="navbarSupportedContent" class="collapse navbar-collapse" >
+				<ul class="nav">
+					<li class="nav-item"><a href="#intro" class="link nav-link">A Comgás</a></li>
+					<li class="nav-item"><a href="#programa" class="link nav-link">O Programa</a></li>
+					<li class="nav-item"><a href="#etapas" class="link nav-link">Etapas</a></li>
+					<li class="nav-item"><a href="#beneficios" class="link nav-link">Benefícios</a></li>
+					<li class="nav-item"><a href="#" class="link nav-link">Inscreva-se</a></li>
+				</ul>
 			</div>
+
+			<img class="img-fluid " src="images/background.png" alt="gráfico">
 		</div>
 
-
 		<!-- section -->
-		<div class="background--isGreen section">
+		<div id="intro" class="background--isGreen section marginTop10Neg">
 			<div class="container">
 				<div class="row">
 
@@ -120,12 +114,7 @@
 									<p>Somos a maior empresa brasileira de soluções energéticas por meio do uso do gás natural.</p>
 								</div>
 
-								<div>
-									<h3>Nome do valor</h3>
-									<p>Somos a maior empresa brasileira de soluções energéticas por meio do uso do gás natural.</p>
-								</div>
-
-
+					
 							</div>
 						</div>
 					</div>
@@ -137,31 +126,29 @@
 		<div class="background--isGray">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-2">
-							<img src="./images/comgas_numero.png" alt="info" />
+					<div class="col-12 col-sm-2 section__title--image">
+						<img class="" src="./images/comgas_numero.png" alt="info" />
 					</div>
-					<div class="col col-sm-10">
+					<div class="col-12 col-sm-10">
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-sm-4">
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos1.png" alt="info" />
 								</div>
-								<div class="col-sm-4">
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos2.png" alt="info" />
 								</div>
-								<div class="col-sm-4">
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos3.png" alt="info" />
 								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-sm-4">
+								
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos4.png" alt="info" />
 								</div>
-								<div class="col-sm-4">
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos5.png" alt="info" />
 								</div>
-								<div class="col-sm-4">
+								<div class="col-6 col-sm-4">
 									<img src="./images/fazemos6.png" alt="info" />
 								</div>
 							</div>
@@ -173,14 +160,14 @@
 
 		
 		<!-- section -->
-		<div class="background--noPadding">
+		<div id="programa" class="background--noPadding">
 			<iframe width="100%" height="500" src="https://www.youtube.com/embed/Kjjs5s8XN8A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 
 		<!-- section -->
 		<div class="background--isGray section">
 
-			<img src="./images/pinDir.png" alt="pin" />
+			<img class="pin d-none d-sm-block" src="./images/pin-right.png" alt="pin" />
 
 			<div class="container">
 				<div class="row">
@@ -208,14 +195,17 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row marginTop80px">
 				
 					<div class="col-sm-6">
-						<p class="highFont--info">
+						<p class="highFont--info d-none d-sm-block">
 							quer transformar<br>
 							sua carreira?<br>
 							entao vem com a gente!
 						</p>
+						<div class="section__title--image  d-block d-sm-none"> 
+							<img src="./images/transformar.png" alt="gráfico - texto transformar sua carreira">
+						</div>
 					</div>
 					<div class="col-sm-6">
 						<p>
@@ -267,7 +257,7 @@
 		</div>
 
 		<!-- section -->
-		<div class="background--isBlue section">
+		<div id="etapas" class="background--isBlue section">
 
 				<div class="container">
 					<div class="row">
@@ -279,7 +269,7 @@
 						</div>
 
 						<div class="col-sm-12">
-							<ul class="etapas">
+							<ul class="etapa">
 								<li>
 									
 										<img src="./images/etapa1.png" alt="" class="etapa__image">
@@ -294,12 +284,12 @@
 								<li>
 									
 										<img src="./images/etapa3.png" alt="" class="etapa__image">
-										<h6 class="etapa__title">Dinâmica em Grupo</h6>
+										<h6 class="etapa__title">Dinâmica <br>em Grupo</h6>
 								</li>
 								<li>
 									
 										<img src="./images/etapa4.png" alt="" class="etapa__image">
-										<h6 class="etapa__title">Comitê de Seleção</h6>
+										<h6 class="etapa__title">Comitê <br>de Seleção</h6>
 								</li>
 								<li>
 								
@@ -314,130 +304,189 @@
 		</div>
 
 		<!-- section -->
-		<div class="background--isSoftBlue section">
+		<div id="beneficios" class="background--isSoftBlue section">
 
 			<div class="container">
 				<div class="row">
 
 					<div class="col-sm-12">
 						<h2 class="section__title">
-							beneficios e remuneração
+							beneficios e remuneracao
 						</h2>
 					</div>
 					
 				</div>
 
 				<div class="row">
-					<div class="col-sm-3">
-						<img src="./images/beneficios1.png" alt="">
-						<span>Assistência<br>Médica</span>
-						
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios1.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Assistência<br>Médica</span>
+							</div>
+						</div>
 					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios2.png" alt="">
-						<span>Convênio<br>Farmácia</span>
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios2.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								Convênio<br>Farmácia
+							</div>
+						</div>
 					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios3.png" alt="">
-						<span>Previdência<br>Privada</span>
-					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios4.png" alt="">
-						<span>Remuneração<br>entre R$ 5.600<br>e R$ 8.900</span>
-					</div>
-				</div>
+					<div class="col-6 col-sm-3 beneficios">
 
-				<div class="row">
-					<div class="col-sm-3">
-						<img src="./images/beneficios5.png" alt="">
-						<span>Assistêcia<br>Odontológica</span>
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios3.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Previdência<br>Privada</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios4.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Remuneração<br>entre R$ 5.600<br>e R$ 8.900</span>
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios5.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Assistêcia<br>Odontológica</span>
+							</div>
+						</div>
 						
 					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios6.png" alt="">
-						<span>VAae Alimentação<br>e Refeição</span>
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios6.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Vale Alimentação<br>e Refeição</span>
+							</div>
+						</div>
 					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios7.png" alt="">
-						<span>MBA in<br>Company</span>
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios7.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>MBA in<br>Company</span>
+							</div>
+						</div>
 					</div>
-					<div class="col-sm-3">
-						<img src="./images/beneficios8.png" alt="">
-						<span>Muitos<br>Outros</span>
+					<div class="col-6 col-sm-3 beneficios">
+						<div class="row">
+							<div class="beneficios--image col-12 col-sm-4">
+								<img class=" img-fluid" src="./images/beneficios8.png" alt="">
+							</div>
+							<div class="col-12 col-sm-8 beneficios--text">
+								<span>Muitos<br>Outros</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
 			</div>
 		</div>
 
-		<div class="background--isGray section 	dateCounter__section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 alignCenter">
-						<span class="higFont">Faltam</span>
-						<span class="highFont dateCounter">18</span>
-						Dias pro fim das inscrições
+		<div class="background--isGray section dateCounter__section">
+			<img class="pin--left d-none d-sm-block" src="./images/pin-left-2.png" alt="pin" />
+			<img class="pin--right d-none d-sm-block" src="./images/pin-right-2.png" alt="pin" />
+			<div class="alignCenter">
+				<div class="dateCounter__holder">
+					<div class="alignCenter dateCounter__container">
+						<span class="highFont--isDate marginRight45px">Faltam</span>
+						<span id="dateCounter" class="highFont--isGreen dateCounter" Counter="0">18</span>
+						<span class="highFont--isDate marginLeft45px">Dias pro fim das inscricoes</span>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="background--isGreen section 	dateCounter__section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3">
-						Programa de<br>
-						Trainee Comgás<br>
-						2018
+		<div class="background--isGreen section dateCounter__section">
+			<div class="alignCenter d-none d-sm-block">
+				<div class="dateCounter__holder ">
+					<div class="dateCounter__container ">
+						<div class="dateCounter__item">
+							Programa de<br>
+							<span class="fontBold">Trainee Comgás<br>
+							2018</span>
+						</div>
+						<div class="">
+							<img src="images/vai_la_faz2.png" alt="gráfico" />
+						</div>
+						<div class="dateCounter__item--right">
+							<a href="#" class="link button--small">Inscreva-se</a>
+						</div>
 					</div>
-					<div class="col-sm-6">
-						Vai lá e faz
-					</div>
-					<div class="col-sm-3">
-						<a href="#" class="link button--small">Inscreva-se</a>
-					</div>
+
+					
+				</div>
+
+				
+
+			</div>
+			<div class="d-block d-sm-none alignCenter">
+				<img class="img-fluid" src="./images/program.png" alt="gráfico" />
+				<div class="alignCenter">
+					<a href="#" class="link nav-link button--menu displayInlineBlock">Inscreva-se</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="background--isGray">
-			<div class="col-sm-10">
-				<nav class="">
-					
-					<ul class="nav">
-						<li><a href="#" class="brand">
-	
-							</a></li>
-						<li><a href="#" class="link">A Comgás</a></li>
-						<li><a href="#" class="link"></a>O Programa</li>
-						<li><a href="#" class="link"></a>Etapas</li>
-						<li><a href="#" class="link"></a>Benefícios</li>
-						<li><a href="#" class="link button--small"></a>Inscreva-se</li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="col-sm-2">
-				<nav>
-					<ul>
-						<li>
-							<a href="#" class="link">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="link">
-								<i class="fab fa-linkedin-in"></i>
-							</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 alignCenter">
+						<nav class="displayInlineBlock">
+							
+							<ul class="nav">
+								<li class="listDivider d-none d-sm-block">
+									<a href="#" class="brand"></a>
+								</li>
+								<li><a href="#intro" class="link">A Comgás</a></li>
+								<li><a href="#programa" class="link">O Programa</a></li>
+								<li><a href="#etapas" class="link">Etapas</a></li>
+								<li><a href="#beneficios" class="link">Benefícios</a></li>
+								<li class="listDivider--isRight">
+										<a href="#" class="link--isSocial">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="link--isSocial">
+											<i class="fab fa-linkedin-in"></i>
+										</a>
+									</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="./js/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script src="./js/animationCounter.min.js"></script>
 		<script src="./js/dist/owl.carousel.min.js"></script>
 		<script src="./js/index.js"></script>
 	</body>
